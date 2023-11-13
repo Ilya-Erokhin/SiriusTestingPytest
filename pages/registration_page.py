@@ -7,13 +7,14 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.BasePage import BasePage
+from utilities.settings import BASE_URL
 
 
 class RegistrationPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.url = "https://uts.sirius.online//#/auth/register/qainternship"
+        self.url = BASE_URL
 
     def open_url(self):
         self.driver.get(self.url)
